@@ -33,7 +33,10 @@ function ExpenseForm(props) {
         return { ...prevState, enteredAmount: value };
       });
     }
-  };
+  };   
+  
+  // console.warn("userInput",userInput)
+
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -44,7 +47,7 @@ function ExpenseForm(props) {
       date: new Date(userInput.enteredDate),
     };
 
-    console.warn(expenseData);
+    console.warn("expenseData",expenseData);
 
     props.onSaveExpenseData(expenseData);
     //提交後需要將所有重製
