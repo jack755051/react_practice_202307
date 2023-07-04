@@ -33,10 +33,9 @@ function ExpenseForm(props) {
         return { ...prevState, enteredAmount: value };
       });
     }
-  };   
-  
-  // console.warn("userInput",userInput)
+  };
 
+  // console.warn("userInput",userInput)
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -47,7 +46,7 @@ function ExpenseForm(props) {
       date: new Date(userInput.enteredDate),
     };
 
-    console.warn("expenseData",expenseData);
+    console.warn("expenseData", expenseData);
 
     props.onSaveExpenseData(expenseData);
     //提交後需要將所有重製
@@ -101,6 +100,9 @@ function ExpenseForm(props) {
         </div>
 
         <div className="new-expense__actions">
+          <button type="button" onClick={props.onCancel}>
+            Cancel
+          </button>
           <button type="submit">Add Expense</button>
         </div>
       </form>
