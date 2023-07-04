@@ -2,6 +2,7 @@ import React from "react";
 import Chart from "../Chart/Chart";
 
 const ExpensesChart = (props) => {
+  //做一個初始陣列
   const chartDataPoints = [
     { label: "Jan", value: 0 },
     { label: "Feb", value: 0 },
@@ -17,8 +18,12 @@ const ExpensesChart = (props) => {
     { label: "Dec", value: 0 },
   ];
 
-  for (const expense in props.expenses) {
+  //<ExpensesChart expenses={filteredExpenses} />
+  //將filteredExpenses資料灌入chartDataPoints
+
+  for (const expense of props.expenses) {
     const expenseMonth = expense.date.getMonth();
+    console.log("expenseMonth", expenseMonth);
     chartDataPoints[expenseMonth].value += expense.amount;
   }
 

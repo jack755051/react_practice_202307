@@ -5,11 +5,9 @@ import "./ExpenseItem.css";
 
 function ExpenseItem(props) {
   const [title, setTitle] = useState(props.title);
-  console.log("test!!!test");
 
   const clickerHandler = () => {
     setTitle("Update!!!");
-    console.warn("I'm Johnny!!!!!");
   };
 
   return (

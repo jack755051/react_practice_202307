@@ -4,6 +4,7 @@ import "./Expenses.css";
 import React, { useState } from "react";
 import ExpensesList from "./ExpensesList";
 import ExpensesFilter from "./ExpensesFilter";
+import ExpensesChart from "./ExpensesChart";
 
 function Expenses(props) {
   const [filteredYear, setFilteredYear] = useState("2020");
@@ -37,6 +38,8 @@ function Expenses(props) {
           selected={filteredYear}
           onChangeFilter={filterChangerHandler}
         />
+        {/* 將過濾後的透過expenses資料帶入 */}
+        <ExpensesChart expenses={filteredExpenses} />
         <ExpensesList items={filteredExpenses} />
 
         {/* 直接在這裡過濾 */}

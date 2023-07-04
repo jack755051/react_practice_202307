@@ -7,7 +7,7 @@ const DUMMY_EXPENSES = [
     id: "e1",
     title: "March Rent Cost",
     amount: 15000,
-    date: new Date(2020, 2, 28),
+    date: new Date(2020, 3, 28),
   },
   {
     id: "e2",
@@ -25,7 +25,7 @@ const DUMMY_EXPENSES = [
     id: "e4",
     title: "Drink (Water / Whisky / Sake)",
     amount: 600,
-    date: new Date(2020, 2, 3),
+    date: new Date(2020, 6, 3),
   },
   {
     id: "e5",
